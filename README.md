@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    small.css
+    <link rel="stylesheet" href="small.css"></link>
     <title>Mashup Called from Service Cloud V2!</title>
 </head>
 <body>
