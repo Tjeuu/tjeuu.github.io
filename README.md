@@ -1,1 +1,24 @@
-# tjeuu.github.io
+<!doctype html>
+<html>
+<head>
+    small.css
+    <title>Mashup Called from Service Cloud V2!</title>
+</head>
+<body>
+    <div>
+        <h2>Individual Business Partner ID:</h2>
+        <h2 class="value" id="mydata1"></h2>
+    </div>
+    <div>
+        <h2>Account Business Partner ID:</h2>
+        <h2 class="value" id="mydata2"></h2>
+    </div>
+    <script>
+        const pa = new URLSearchParams(window.location.search);
+        a = pa.get("par1");
+        b = pa.get("par2");
+        document.getElementById("mydata1").innerHTML = a;
+        document.getElementById("mydata2").innerHTML = b;
+    </script>
+</body>
+</html>
