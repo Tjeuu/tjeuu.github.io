@@ -1,25 +1,27 @@
-<!doctype html>
-<html>
-    <head>
-        <link rel="stylesheet" href="small.css"></link>
-        <title>Mashup Called from Service Cloud V2!</title>
-    </head>
-    <body>
-        <div>
-            <h2>Individual Business Partner ID:</h2>
-            <h2 class="value" id="mydata1"></h2>
-        </div>
-        <div>
-        <h2>Account Business Partner ID:</h2>
-        <h2 class="value" id="mydata2"></h2>
-    </div>
-        <script>
-        const pa = new URLSearchParams(window.location.search);
-        a = pa.get("par1");
-        b = pa.get("par2");
-        document.getElementById("mydata1").innerHTML = a;
-        document.getElementById("mydata2").innerHTML = b;
-    </script>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>OpenStreetMap with Leaflet</title>
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+                  integrity="sha256-p4NxAoCcT7V70vKM0fUUpzjFNyAOHiIwhNMIgFyTZjY="
+                  crossorigin=""/>
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                    integrity="sha256-20nQCchB9co0qIjGwZFYjg+6o7sWJ59WfguazHP4IDk="
+                    crossorigin=""></script>
+            <style>
+                #mapid { height: 400px; width: 100%; }
+            </style>
+        </head>
+        <body>
+            <div id="mapid"></div>
+            <script>
+                var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(mymap);
+            </script>
+        </body>
+        </html>
         
-    </body>
-</html>
